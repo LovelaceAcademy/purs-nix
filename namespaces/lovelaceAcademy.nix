@@ -1,10 +1,10 @@
 {
   cardano-transaction-lib = {
     src.git = {
-      repo = "https://github.com/Plutonomicon/cardano-transaction-lib.git";
-      rev = "1ec5a7a82e2a119364a3577022b6ff3c7e84a612";
+      repo = "https://github.com/LovelaceAcademy/cardano-transaction-lib.git";
+      rev = "9d159e5ad132285792297eb23ad6c6b9bd781f90";
     };
 
-    info = {};
+    info = /package.nix;
   };
 }
