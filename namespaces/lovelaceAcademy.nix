@@ -99,7 +99,7 @@
     info = { ps-pkgs, ... }: with ps-pkgs;
       [
         arrays
-        assert
+        ps-pkgs."assert"
         console
         effect
         lazy
