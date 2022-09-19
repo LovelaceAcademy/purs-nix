@@ -3,7 +3,10 @@ let
   l = p.lib; p = pkgs;
   get-flake = getFlake "github:ursi/get-flake/703f15558daa56dfae19d1858bb3046afe68831a";
   pkgs = (get-flake ../.).inputs.nixpkgs.legacyPackages.${currentSystem};
-  package-set-repo = fetchGit "https://github.com/purescript/package-sets";
+  package-set-repo = fetchGit {
+    url = "https://github.com/purescript/package-sets";
+    rev = "dffcbcfe9b35a3a826e4389fade3e2b28fb0c614";
+  };
   packages = l.importJSON (package-set-repo + /packages.json);
 
   escape-reserved-word = ps-pkgs: str:
