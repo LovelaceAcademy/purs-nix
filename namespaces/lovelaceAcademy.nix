@@ -62,8 +62,8 @@
       repo = "https://github.com/mlabs-haskell/purescript-bridge-aeson-helpers.git";
       rev = "44d0dae060cf78babd4534320192b58c16a6f45b";
     };
-    info = { ps-pkgs, ... }: with ps-pkgs;
-      [
+    info = { ps-pkgs, ... }: with ps-pkgs; {
+      dependencies = [
         aff
         argonaut-codecs
         argonaut-core
@@ -90,6 +90,7 @@
         tuples
         typelevel-prelude
       ];
+    };
   };
 
   sequences = {
@@ -97,8 +98,8 @@
       repo = "https://github.com/hdgarrood/purescript-sequences";
       rev = "1f1d828ef30070569c812d0af23eb7253bb1e990";
     };
-    info = { ps-pkgs, ... }: with ps-pkgs;
-      [
+    info = { ps-pkgs, ... }: with ps-pkgs; {
+      dependencies = [
         arrays
         ps-pkgs."assert"
         console
@@ -117,6 +118,7 @@
         unfoldable
         unsafe-coerce
       ];
+    };
   };
 
   properties = {
@@ -124,11 +126,12 @@
       repo = "https://github.com/Risto-Stevcev/purescript-properties.git";
       rev = "ddcad0f6043cc665037538467a2e2e4173ef276a";
     };
-    info = { ps-pkgs, ... }: with ps-pkgs;
-      [
+    info = { ps-pkgs, ... }: with ps-pkgs; {
+      dependencies = [
         prelude
         console
       ];
+    };
   };
 
   lattice = {
@@ -136,12 +139,13 @@
       repo = "https://github.com/Risto-Stevcev/purescript-lattice.git";
       rev = "aebe3686eba30f199d17964bfa892f0176c1742d";
     };
-    info = { ps-pkgs, ps-pkgs-ns, ... }: with ps-pkgs; with ps-pkgs-ns;
-      [
+    info = { ps-pkgs, ps-pkgs-ns, ... }: with ps-pkgs; with ps-pkgs-ns; {
+      dependencies = [
         prelude
         console
         lovelaceAcademy.properties
       ];
+    };
   };
 
   mote = {
@@ -149,12 +153,13 @@
       repo = "https://github.com/garyb/purescript-mote.git";
       rev = "29aea4ad7b013d50b42629c87b01cf0202451abd";
     };
-    info = { ps-pkgs, ... }: with ps-pkgs;
-      [
+    info = { ps-pkgs, ... }: with ps-pkgs; {
+      dependencies = [
         these
         transformers
         arrays
       ];
+    };
   };
 
   medea = {
@@ -162,8 +167,8 @@
       repo = "https://github.com/juspay/medea-ps.git";
       rev = "8b215851959aa8bbf33e6708df6bd683c89d1a5a";
     };
-    info = { ps-pkgs, ... }: with ps-pkgs;
-      [
+    info = { ps-pkgs, ... }: with ps-pkgs; {
+      dependencies = [
         aff
         argonaut
         arrays
@@ -204,6 +209,7 @@
         unordered-collections
         unsafe-coerce
       ];
+    };
   };
 
   purescript-toppokki = {
@@ -212,8 +218,8 @@
       ref = "mike/browserpages";
       rev = "6983e07bf0aa55ab779bcef12df3df339a2b5bd9";
     };
-    info = { ps-pkgs, ... }: with ps-pkgs;
-      [
+    info = { ps-pkgs, ... }: with ps-pkgs; {
+      dependencies = [
         prelude
         record
         functions
@@ -222,5 +228,6 @@
         node-buffer
         node-fs-aff
       ];
+    };
   };
 }
