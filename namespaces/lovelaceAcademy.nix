@@ -13,7 +13,7 @@
       ref = "klntsky/490-forbid-unlawful-encodeaeson";
       rev = "8e9d42980e824450c18c397295573160d1ce8424";
     };
-    info = { ps-pkgs, ... }: with ps-pkgs;
+    info = { ps-pkgs, ps-pkgs-ns, ... }: with ps-pkgs; with ps-pkgs-ns;
       {
         dependencies = [
           aff
@@ -44,7 +44,7 @@
           prelude
           quickcheck
           record
-          sequences
+          lovelaceAcademy.sequences
           spec
           strings
           transformers
@@ -136,11 +136,11 @@
       repo = "https://github.com/Risto-Stevcev/purescript-lattice.git";
       rev = "aebe3686eba30f199d17964bfa892f0176c1742d";
     };
-    info = { ps-pkgs, ... }: with ps-pkgs;
+    info = { ps-pkgs, ps-pkgs-ns, ... }: with ps-pkgs; with ps-pkgs-ns;
       [
         prelude
         console
-        properties
+        lovelaceAcademy.properties
       ];
   };
 
