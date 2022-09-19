@@ -10,6 +10,7 @@
   aeson = {
     src.git = {
       repo = "https://github.com/mlabs-haskell/purescript-aeson.git";
+      ref = "klntsky/490-forbid-unlawful-encodeaeson";
       rev = "8e9d42980e824450c18c397295573160d1ce8424";
     };
     info = { ps-pkgs, ... }: with ps-pkgs;
@@ -94,7 +95,7 @@
   sequences = {
     src.git = {
       repo = "https://github.com/hdgarrood/purescript-sequences";
-      ref = "v3.0.2";
+      rev = "1f1d828ef30070569c812d0af23eb7253bb1e990";
     };
     info = { ps-pkgs, ... }: with ps-pkgs;
       [
@@ -121,7 +122,7 @@
   properties = {
     src.git = {
       repo = "https://github.com/Risto-Stevcev/purescript-properties.git";
-      ref = "v0.2.0";
+      rev = "ddcad0f6043cc665037538467a2e2e4173ef276a";
     };
     info = { ps-pkgs, ... }: with ps-pkgs;
       [
@@ -133,7 +134,7 @@
   lattice = {
     src.git = {
       repo = "https://github.com/Risto-Stevcev/purescript-lattice.git";
-      ref = "v0.3.0";
+      rev = "aebe3686eba30f199d17964bfa892f0176c1742d";
     };
     info = { ps-pkgs, ... }: with ps-pkgs;
       [
@@ -145,8 +146,8 @@
 
   mote = {
     src.git = {
-      repo = "https://github.com/garyb/purescript-mote";
-      ref = "v1.1.0";
+      repo = "https://github.com/garyb/purescript-mote.git";
+      rev = "29aea4ad7b013d50b42629c87b01cf0202451abd";
     };
     info = { ps-pkgs, ... }: with ps-pkgs;
       [
@@ -159,7 +160,7 @@
   medea = {
     src.git = {
       repo = "https://github.com/juspay/medea-ps.git";
-      ref = "8b215851959aa8bbf33e6708df6bd683c89d1a5a";
+      rev = "8b215851959aa8bbf33e6708df6bd683c89d1a5a";
     };
     info = { ps-pkgs, ... }: with ps-pkgs;
       [
@@ -208,7 +209,8 @@
   purescript-toppokki = {
     src.git = {
       repo = "https://github.com/firefrorefiddle/purescript-toppokki";
-      ref = "6983e07bf0aa55ab779bcef12df3df339a2b5bd9";
+      ref = "mike/browserpages";
+      rev = "6983e07bf0aa55ab779bcef12df3df339a2b5bd9";
     };
     info = { ps-pkgs, ... }: with ps-pkgs;
       [
