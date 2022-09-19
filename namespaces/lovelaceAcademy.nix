@@ -131,16 +131,10 @@
 
   lattice = {
     src.git = {
-      repo = "https://github.com/Risto-Stevcev/purescript-lattice.git";
-      rev = "aebe3686eba30f199d17964bfa892f0176c1742d";
+      repo = "https://github.com/LovelaceAcademy/purescript-lattice.git";
+      rev = "1d74abb4a3c88502f3daf5db343c4d6e0e8649e4";
     };
-    info = { ps-pkgs, ps-pkgs-ns, ... }: with ps-pkgs; with ps-pkgs-ns; {
-      dependencies = [
-        prelude
-        console
-        lovelaceAcademy.properties
-      ];
-    };
+    info = /package.nix;
   };
 
   mote = {
