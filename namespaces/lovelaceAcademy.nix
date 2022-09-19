@@ -2,7 +2,7 @@
   cardano-transaction-lib = {
     src.git = {
       repo = "https://github.com/LovelaceAcademy/cardano-transaction-lib.git";
-      rev = "c89e5de2fd429f7a56d281c851a2f63f9e997979";
+      rev = "b179a346a6abcfff6b15d3094e865942396848f0";
     };
     info = /package.nix;
   };
