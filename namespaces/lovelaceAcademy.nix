@@ -95,30 +95,10 @@
 
   sequences = {
     src.git = {
-      repo = "https://github.com/hdgarrood/purescript-sequences";
-      rev = "1f1d828ef30070569c812d0af23eb7253bb1e990";
+      repo = "https://github.com/LovelaceAcademy/purescript-sequences";
+      rev = "162022bc0c499ee4b5ab2c3b5c85098acc81c71e";
     };
-    info = { ps-pkgs, ... }: with ps-pkgs; {
-      dependencies = [
-        arrays
-        ps-pkgs."assert"
-        console
-        effect
-        lazy
-        maybe
-        newtype
-        nonempty
-        partial
-        prelude
-        profunctor
-        psci-support
-        quickcheck
-        quickcheck-laws
-        tuples
-        unfoldable
-        unsafe-coerce
-      ];
-    };
+    info = /package.nix;
   };
 
   properties = {
