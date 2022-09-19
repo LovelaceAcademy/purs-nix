@@ -123,15 +123,10 @@
 
   properties = {
     src.git = {
-      repo = "https://github.com/Risto-Stevcev/purescript-properties.git";
-      rev = "ddcad0f6043cc665037538467a2e2e4173ef276a";
+      repo = "https://github.com/LovelaceAcademy/purescript-properties.git";
+      rev = "e87df57a8e1f49f2f5e89b25d7e310faa17b3605";
     };
-    info = { ps-pkgs, ... }: with ps-pkgs; {
-      dependencies = [
-        prelude
-        console
-      ];
-    };
+    info = /package.nix;
   };
 
   lattice = {
