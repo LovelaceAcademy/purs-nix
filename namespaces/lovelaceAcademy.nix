@@ -164,52 +164,10 @@
 
   medea = {
     src.git = {
-      repo = "https://github.com/juspay/medea-ps.git";
-      rev = "8b215851959aa8bbf33e6708df6bd683c89d1a5a";
+      repo = "https://github.com/LovelaceAcademy/medea-ps.git";
+      rev = "d19e96ef3576f745adaf1b9e6d8c4180e0aafc1f";
     };
-    info = { ps-pkgs, ... }: with ps-pkgs; {
-      dependencies = [
-        aff
-        argonaut
-        arrays
-        bifunctors
-        control
-        effect
-        either
-        enums
-        exceptions
-        foldable-traversable
-        foreign-object
-        free
-        integers
-        lists
-        maybe
-        mote
-        naturals
-        newtype
-        node-buffer
-        node-fs-aff
-        node-path
-        nonempty
-        ordered-collections
-        parsing
-        partial
-        prelude
-        psci-support
-        quickcheck
-        quickcheck-combinators
-        safely
-        spec
-        strings
-        these
-        transformers
-        typelevel
-        tuples
-        unicode
-        unordered-collections
-        unsafe-coerce
-      ];
-    };
+    info = /package.nix;
   };
 
   purescript-toppokki = {
