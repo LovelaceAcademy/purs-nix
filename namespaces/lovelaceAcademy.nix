@@ -9,52 +9,10 @@
 
   aeson = {
     src.git = {
-      repo = "https://github.com/mlabs-haskell/purescript-aeson.git";
-      ref = "klntsky/490-forbid-unlawful-encodeaeson";
-      rev = "8e9d42980e824450c18c397295573160d1ce8424";
+      repo = "https://github.com/LovelaceAcademy/purescript-aeson.git";
+      rev = "a83565c34dd7e4727061924efecedee67e1fcc82";
     };
-    info = { ps-pkgs, ps-pkgs-ns, ... }: with ps-pkgs; with ps-pkgs-ns;
-      {
-        dependencies = [
-          aff
-          argonaut
-          argonaut-codecs
-          argonaut-core
-          arrays
-          bifunctors
-          bigints
-          const
-          control
-          effect
-          either
-          exceptions
-          foldable-traversable
-          foreign-object
-          gen
-          identity
-          integers
-          maybe
-          newtype
-          node-buffer
-          node-fs-aff
-          node-path
-          nonempty
-          numbers
-          partial
-          prelude
-          quickcheck
-          record
-          lovelaceAcademy.sequences
-          spec
-          strings
-          transformers
-          tuples
-          typelevel
-          typelevel-prelude
-          uint
-          untagged-union
-        ];
-      };
+    info = /package.nix;
   };
 
   aeson-helpers = {
