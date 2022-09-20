@@ -78,7 +78,7 @@ with builtins;
             if (l.functionArgs f)?${check-arg} then
               abort "${name}: The info function expects a '${check-arg}' attribute. The purpose of this attribute is to ensure the info function will not break if new arguments are added. If you're encountering this error, it's likely the fix you're looking for is to use the `...` syntax."
             else
-              f { inherit build ps-pkgs ps-pkgs-ns;
+              f { inherit build ps-pkgs ps-pkgs-ns pkgs;
                   inherit (l) licenses;
 
                   # make sure the function can accept new arguments in the future
