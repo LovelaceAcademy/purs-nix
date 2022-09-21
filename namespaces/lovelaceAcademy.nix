@@ -2,7 +2,7 @@
   cardano-transaction-lib = {
     src.git = {
       repo = "https://github.com/LovelaceAcademy/cardano-transaction-lib.git";
-      rev = "234a2bffe8a39911aa638bcb788e1a4c625320b4";
+      rev = "7ccfd0ea24c86614866e940f8bd96adc302dab15";
     };
     info = /package.nix;
   };
@@ -116,5 +116,5 @@
     };
   };
 
-  bigints.src.flake.url = "github:LovelaceAcademy/bigints/44c071cacc8ed645c840e27f053b8e6c8030ded3";
+  bigints.src.flake.url = "github:LovelaceAcademy/purescript-bigints/a75598c1dfe3b124bd080206a939cee5d2824e12";
 }
