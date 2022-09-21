@@ -1,4 +1,4 @@
-{ debug =
+_:{ debug =
     { src.git =
         { repo = "https://github.com/ursi/purescript-debuggest.git";
           rev = "f03ae5f6984b6f89101660fdd0e09620c8281c87";

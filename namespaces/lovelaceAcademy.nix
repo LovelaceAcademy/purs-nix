@@ -1,4 +1,6 @@
-rec {
+{ ps-pkgs-ns, ... }:
+with ps-pkgs-ns.lovelaceAcademy;
+{
   cardano-transaction-lib = {
     src.git = {
       repo = "https://github.com/LovelaceAcademy/cardano-transaction-lib.git";
@@ -20,37 +22,35 @@ rec {
       repo = "https://github.com/mlabs-haskell/purescript-bridge-aeson-helpers.git";
       rev = "44d0dae060cf78babd4534320192b58c16a6f45b";
     };
-    info = { ps-pkgs-ns, ... }:
-      with ps-pkgs-ns.lovelaceAcademy;
-      {
-        dependencies = [
-          aff
-          argonaut-codecs
-          argonaut-core
-          arrays
-          bifunctors
-          contravariant
-          control
-          effect
-          either
-          enums
-          foldable-traversable
-          foreign-object
-          maybe
-          newtype
-          ordered-collections
-          prelude
-          profunctor
-          psci-support
-          quickcheck
-          record
-          spec
-          spec-quickcheck
-          transformers
-          tuples
-          typelevel-prelude
-        ];
-      };
+    info = {
+      dependencies = [
+        aff
+        argonaut-codecs
+        argonaut-core
+        arrays
+        bifunctors
+        contravariant
+        control
+        effect
+        either
+        enums
+        foldable-traversable
+        foreign-object
+        maybe
+        newtype
+        ordered-collections
+        prelude
+        profunctor
+        psci-support
+        quickcheck
+        record
+        spec
+        spec-quickcheck
+        transformers
+        tuples
+        typelevel-prelude
+      ];
+    };
   };
 
   sequences = {
@@ -82,15 +82,13 @@ rec {
       repo = "https://github.com/garyb/purescript-mote.git";
       rev = "29aea4ad7b013d50b42629c87b01cf0202451abd";
     };
-    info = { ps-pkgs-ns, ... }:
-      with ps-pkgs-ns.lovelaceAcademy;
-      {
-        dependencies = [
-          these
-          transformers
-          arrays
-        ];
-      };
+    info = {
+      dependencies = [
+        these
+        transformers
+        arrays
+      ];
+    };
   };
 
   medea = {
@@ -107,19 +105,17 @@ rec {
       ref = "mike/browserpages";
       rev = "6983e07bf0aa55ab779bcef12df3df339a2b5bd9";
     };
-    info = { ps-pkgs-ns, ... }:
-      with ps-pkgs-ns.lovelaceAcademy;
-      {
-        dependencies = [
-          prelude
-          record
-          functions
-          node-http
-          aff-promise
-          node-buffer
-          node-fs-aff
-        ];
-      };
+    info = {
+      dependencies = [
+        prelude
+        record
+        functions
+        node-http
+        aff-promise
+        node-buffer
+        node-fs-aff
+      ];
+    };
   };
 
   bigints.src.flake.url = "github:LovelaceAcademy/purescript-bigints/e6e4c75a3fee94f4e65cc434db4e8f8caad27330";
