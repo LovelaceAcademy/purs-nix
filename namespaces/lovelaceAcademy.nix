@@ -4,7 +4,7 @@ with ps-pkgs-ns.lovelaceAcademy;
   cardano-transaction-lib = {
     src.git = {
       repo = "https://github.com/LovelaceAcademy/cardano-transaction-lib.git";
-      rev = "19dc3481c4b50f28ccbc27ba8c1fad2caf94c3ce";
+      rev = "2834fefe2561b144be323e5875fa8393c8a14ef9";
     };
     info = /package.nix;
   };
@@ -12,7 +12,7 @@ with ps-pkgs-ns.lovelaceAcademy;
   aeson = {
     src.git = {
       repo = "https://github.com/LovelaceAcademy/purescript-aeson.git";
-      rev = "a83565c34dd7e4727061924efecedee67e1fcc82";
+      rev = "c9ba9298b522581b2da927eb689ff44bd9ee8445";
     };
     info = /package.nix;
   };
@@ -56,7 +56,7 @@ with ps-pkgs-ns.lovelaceAcademy;
   sequences = {
     src.git = {
       repo = "https://github.com/LovelaceAcademy/purescript-sequences";
-      rev = "162022bc0c499ee4b5ab2c3b5c85098acc81c71e";
+      rev = "e37a04e5b88e0cdc2bc92d32aaf281ed61f9fdb0";
     };
     info = /package.nix;
   };
@@ -64,7 +64,7 @@ with ps-pkgs-ns.lovelaceAcademy;
   properties = {
     src.git = {
       repo = "https://github.com/LovelaceAcademy/purescript-properties.git";
-      rev = "e87df57a8e1f49f2f5e89b25d7e310faa17b3605";
+      rev = "69c73d0eeeea79f7a73ec18976fda89e404d7760";
     };
     info = /package.nix;
   };
@@ -72,7 +72,7 @@ with ps-pkgs-ns.lovelaceAcademy;
   lattice = {
     src.git = {
       repo = "https://github.com/LovelaceAcademy/purescript-lattice.git";
-      rev = "1d74abb4a3c88502f3daf5db343c4d6e0e8649e4";
+      rev = "80f7411d1f51d033a3a1b2d2a15bac3e06e81e5c";
     };
     info = /package.nix;
   };
@@ -94,7 +94,7 @@ with ps-pkgs-ns.lovelaceAcademy;
   medea = {
     src.git = {
       repo = "https://github.com/LovelaceAcademy/medea-ps.git";
-      rev = "d19e96ef3576f745adaf1b9e6d8c4180e0aafc1f";
+      rev = "f7ccfd45d5af6c870d2f06f4e7bfb5a35bafefef";
     };
     info = /package.nix;
   };
@@ -118,9 +118,9 @@ with ps-pkgs-ns.lovelaceAcademy;
     };
   };
 
-  bigints.src.flake.url = "github:LovelaceAcademy/purescript-bigints/e6e4c75a3fee94f4e65cc434db4e8f8caad27330";
+  bigints.src.flake.url = "github:LovelaceAcademy/purescript-bigints/1e7e8a260b3283307fa887be26300fb29604799a";
 
-  affjax.src.flake.url = "github:LovelaceAcademy/purescript-affjax/1843d557fd174d9f7e83e5cca942160d842ab3ac";
+  affjax.src.flake.url = "github:LovelaceAcademy/purescript-affjax/c24e75155cf2b243472b6f163a7772290a603ed1";
 
   # generated from ../official-package-set/generate.sh
   # with CTL matching nixpkgs version
