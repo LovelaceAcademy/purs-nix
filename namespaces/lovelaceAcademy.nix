@@ -1,18 +1,12 @@
 { ps-pkgs-ns, ... }:
 with ps-pkgs-ns.lovelaceAcademy;
 {
-  cardano-transaction-lib = {
-    src.git = {
-      repo = "https://github.com/LovelaceAcademy/cardano-transaction-lib.git";
-      rev = "2834fefe2561b144be323e5875fa8393c8a14ef9";
-    };
-    info = /package.nix;
-  };
+  cardano-transaction-lib.src.flake.url = "github:LovelaceAcademy/cardano-transaction-lib/790bd5963a5b3e4c231b83288c91f632a2d6101e";
 
   aeson = {
     src.git = {
       repo = "https://github.com/LovelaceAcademy/purescript-aeson.git";
-      rev = "c9ba9298b522581b2da927eb689ff44bd9ee8445";
+      rev = "85449440c264d5eedf1acbdf8649fc8eb035e50b";
     };
     info = /package.nix;
   };
@@ -94,7 +88,7 @@ with ps-pkgs-ns.lovelaceAcademy;
   medea = {
     src.git = {
       repo = "https://github.com/LovelaceAcademy/medea-ps.git";
-      rev = "f7ccfd45d5af6c870d2f06f4e7bfb5a35bafefef";
+      rev = "1c34dbeba9534aaecb874fd17ede8dfe62923a92";
     };
     info = /package.nix;
   };
