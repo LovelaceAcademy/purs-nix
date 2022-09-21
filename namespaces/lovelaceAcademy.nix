@@ -115,4 +115,6 @@
       ];
     };
   };
+
+  bigints.src.flake.url = "github:LovelaceAcademy/bigints/44c071cacc8ed645c840e27f053b8e6c8030ded3";
 }
