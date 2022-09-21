@@ -125,6 +125,7 @@ with ps-pkgs-ns.lovelaceAcademy;
   # generated from ../official-package-set/generate.sh
   # with CTL matching nixpkgs version
   # duplications were removed
+  # all ocurrences of pkgs-ns were changed to ps-pkgs-ns.lovelaceAcademy
 
   abides =
     {
@@ -1335,7 +1336,7 @@ with ps-pkgs-ns.lovelaceAcademy;
           dependencies =
             [
               aff
-              ps-pkgs."assert"
+              ps-pkgs-ns.lovelaceAcademy."assert"
               avar
               console
               contravariant
@@ -1370,7 +1371,7 @@ with ps-pkgs-ns.lovelaceAcademy;
           dependencies =
             [
               aff
-              ps-pkgs."assert"
+              ps-pkgs-ns.lovelaceAcademy."assert"
               avar
               channel
               console
@@ -2257,7 +2258,7 @@ with ps-pkgs-ns.lovelaceAcademy;
               aff
               aff-promise
               argonaut
-              ps-pkgs."assert"
+              ps-pkgs-ns.lovelaceAcademy."assert"
               console
               effect
               foreign-object
@@ -3877,7 +3878,7 @@ with ps-pkgs-ns.lovelaceAcademy;
 
           dependencies =
             [
-              ps-pkgs."assert"
+              ps-pkgs-ns.lovelaceAcademy."assert"
               console
               effect
               foreign-object
@@ -4423,7 +4424,7 @@ with ps-pkgs-ns.lovelaceAcademy;
 
           dependencies =
             [
-              ps-pkgs."assert"
+              ps-pkgs-ns.lovelaceAcademy."assert"
               console
               effect
               integers
@@ -7315,7 +7316,7 @@ with ps-pkgs-ns.lovelaceAcademy;
           dependencies =
             [
               arrays
-              ps-pkgs."assert"
+              ps-pkgs-ns.lovelaceAcademy."assert"
               console
               control
               effect
@@ -9160,7 +9161,7 @@ with ps-pkgs-ns.lovelaceAcademy;
 
           dependencies =
             [
-              ps-pkgs."assert"
+              ps-pkgs-ns.lovelaceAcademy."assert"
               console
               effect
               foreign
@@ -9355,7 +9356,7 @@ with ps-pkgs-ns.lovelaceAcademy;
 
           dependencies =
             [
-              ps-pkgs."assert"
+              ps-pkgs-ns.lovelaceAcademy."assert"
               console
               effect
               foreign
