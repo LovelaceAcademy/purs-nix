@@ -116,7 +116,7 @@
     };
   };
 
-  bigints.src.flake.url = "github:LovelaceAcademy/purescript-bigints/a75598c1dfe3b124bd080206a939cee5d2824e12";
+  bigints.src.flake.url = "github:LovelaceAcademy/purescript-bigints/e6e4c75a3fee94f4e65cc434db4e8f8caad27330";
   
-  affjax.src.flake.url = "github:LovelaceAcademy/purescript-affjax/e543b0789db01de138992a2018ceb100951f8653";
+  affjax.src.flake.url = "github:LovelaceAcademy/purescript-affjax/1843d557fd174d9f7e83e5cca942160d842ab3ac";
 }
