@@ -1,6 +1,6 @@
 # purs-nix
 
-> Moved to LovelaceAcademy/ctl-nix
+> Moved to [LovelaceAcademy/ctl-nix](https://github.com/LovelaceAcademy/ctl-nix)
 
 **purs-nix** is a tool for Nix-based PureScript development. It comes with both a Nix API, as well as a CLI you can use for development.
 
