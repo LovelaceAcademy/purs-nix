@@ -3,13 +3,15 @@ with builtins;
   let
     l = p.lib; p = pkgs; u = utils;
 
+    get-flake = flake: if flake ? url then getFlake flake.url else flake;
+
     build =
       { name
       , ...
       }@args:
       if l.hasAttrByPath [ "src" "flake" ] args then
         l.recursiveUpdate
-          (getFlake args.src.flake.url)
+          (get-flake args.src.flake)
             .packages
             .${p.system}
             .${args.src.flake.package or "default"}
