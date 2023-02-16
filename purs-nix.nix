@@ -274,6 +274,9 @@ with builtins;
                       ln -s ${result.drv}/!(*.json) output
                       ${copy} ${result.drv}/*.json output
                     fi
+                    if [[ -e ${package}/node_modules ]]; then
+                       ${copy} ${package}/node_modules output/node_modules
+                    fi
                     '';
 
                 acc = acc' // result.acc;
