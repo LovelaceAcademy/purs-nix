@@ -99,6 +99,7 @@ p:
       else
         { pname = name; inherit version; };
 
+
     node-command =
       { argv-1
       , import
@@ -166,4 +167,25 @@ p:
        then ps-pkgs.${dep}
        else dep
       ).purs-nix-info;
+
+    node_modules-maker = name: foreign: path:
+      ''
+        node_modules="${path}/node_modules"
+        mkdir -p $node_modules
+        for entry in ${foreign}/node_modules/*; do
+          link=$(basename "$entry")
+          link_target="$node_modules/$link"
+          if [[ -e $link_target ]]; then
+            err="foreign from ${name} has a confliciting $link module"
+            if [[ $(readlink -f "$link_target") -ef "$entry" ]]; then
+              echo "WARN: $err, but they refer to the same module"
+            else
+              echo "ERROR: $err, please fix the conflict and try again"
+              exit 1
+            fi
+          else
+            ln -s "$entry" "$node_modules"
+          fi
+        done
+      '';
   }

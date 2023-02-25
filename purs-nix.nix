@@ -136,34 +136,46 @@ with builtins;
           let
             combined =
               foldl'
-                (acc: dep:
-                   l.recursiveUpdate acc (dep.purs-nix-info.foreign or {})
-                )
+                (acc: dep: l.recursiveUpdate acc (
+                  if dep?purs-nix-info.foreign then
+                    if l.attrsets.isDerivation dep.purs-nix-info.foreign then
+                      { ${u.dep-name dep} = dep.purs-nix-info.foreign; }
+                    else
+                      dep.purs-nix-info.foreign
+                  else {}
+                ))
                 (if foreign == null then {} else foreign)
                 deps;
           in
           foldl'
             (acc: { name, value }:
-               let module-path = "${prefix}/${name}"; in
-               ''
-               ${acc}
+               let module-path = "${prefix}/${name}"; in 
+                if l.attrsets.isDerivation value then
+                  ''
+                    ${acc}
 
-               if [[ -e ${module-path} ]]; then
-                 if [[ -h ${module-path} ]]; then
-                   local src=$(readlink -f ${module-path})
-                   rm ${module-path}
-                   ${copy} $src ${module-path}
-                 fi
+                    ${u.node_modules-maker name value prefix}
+                  ''
+                else 
+                  ''
+                  ${acc}
 
-                 ${if value?node_modules then
-                     "ln -fsT ${value.node_modules} ${module-path}/node_modules"
-                   else if value?src then
-                     "ln -fsT ${value.src} ${module-path}/foreign"
-                   else
-                     abort "The only supported foreign options are 'node_modules' and 'src'."
-                 }
-               fi
-               ''
+                  if [[ -e ${module-path} ]]; then
+                    if [[ -h ${module-path} ]]; then
+                      local src=$(readlink -f ${module-path})
+                      rm ${module-path}
+                      ${copy} $src ${module-path}
+                    fi
+
+                    ${if value?node_modules then
+                        "ln -fsT ${value.node_modules} ${module-path}/node_modules"
+                      else if value?src then
+                        "ln -fsT ${value.src} ${module-path}/foreign"
+                      else
+                        abort "The only supported foreign is derivation with node_modules or attrset with 'node_modules' or 'src'."
+                    }
+                  fi
+                  ''
             )
             ""
             (l.mapAttrsToList l.nameValuePair combined);
@@ -261,6 +273,10 @@ with builtins;
                         acc = acc';
                       }
                       args;
+                node_modules =
+                  if info?foreign && l.attrsets.isDerivation info.foreign then
+                    u.node_modules-maker (u.dep-name package) info.foreign "output"
+                  else "";
               in
               { augment =
                   p.writeShellScript "${info.name}-merge"
@@ -274,9 +290,7 @@ with builtins;
                       ln -s ${result.drv}/!(*.json) output
                       ${copy} ${result.drv}/*.json output
                     fi
-                    if [[ -e ${package}/node_modules ]]; then
-                       ${copy} ${package}/node_modules output/node_modules
-                    fi
+                    ${node_modules}
                     '';
 
                 acc = acc' // result.acc;
